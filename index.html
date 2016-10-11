@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<!-- <link rel="stylesheet" href="css/main.css"> -->
 		<script src="js/modernizr-2.8.3.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js" integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE=" crossorigin="anonymous"></script>
 		<script src="js/magic.js"></script>
 	</head>
 	<body>
@@ -25,34 +26,34 @@
 		<div class="contain">
 			<a class="close"></a>
 			<nav class="menu">
-				<a href="#"><img src="assets/xinu_text.svg" alt="XINU"></a> |
-				<a href="#">THE STORE</a> |
-				<a href="#">PRESS</a> |
+				<a href="#about_en" id="logo">XINU</a> |
+				<a href="#tienda_en">STORE</a> |
+				<a href="#press">PRESS</a> |
 				<a href="mailto:hola@xinu.mx">CONTACT</a> |
-				<a href="#"><img src="assets/ig_logo.svg" alt="instagram"></a> |
-				<a class="lang show" id="es" href="#">ESP</a><a class="lang hide" id="en">ENG</a>
+				<a href="http://www.instagram.com/xinuperfumes" target="_blank"><img src="assets/ig_logo.svg" alt="instagram"></a> |
+				<a class="#lang hide" id="es" href="#">ESP</a><a class="lang hide" id="en">ENG</a>
 			</nav>
 			<div class="content" id="about_en">
-				Xinú is a high-end perfumery brand that draws its inspiration from the America’s aromatic botany. Its perfumes document and pay homage to the visual and olfactory richness of the continent’s species.
+				<p>Xinú is a high-end perfumery brand that draws its inspiration from the America’s aromatic botany. Its perfumes document and pay homage to the visual and olfactory richness of the continent’s species.</p>
 
-				Xinú builds its foundation on the sensory indulgence provided by scents; it appeals to our individual olfactory memory. Xinú´s narrative is merely documentary: plants are introduced with their first and last names as they are the main characters in this story.
+				<p>Xinú builds its foundation on the sensory indulgence provided by scents; it appeals to our individual olfactory memory. Xinú´s narrative is merely documentary: plants are introduced with their first and last names as they are the main characters in this story.</p>
 
-				America symbolizes vastness and exoticism, a permanent search and discovery. Xinú is a reflection of botanical richness, artisanal mastery, cutting edge design and olfactory delight.
+				<p>America symbolizes vastness and exoticism, a permanent search and discovery. Xinú is a reflection of botanical richness, artisanal mastery, cutting edge design and olfactory delight.</p>
 
 				<hr>
 
-				Xinú means ‘nose’ in Otomi. Otomi is a beautiful tonal language still present in various regions of Mexico.
+				<p>Xinú means ‘nose’ in Otomi. Otomi is a beautiful tonal language still present in various regions of Mexico.</p>
 			</div>
 			<div class="content" id="about_es">
-				Xinú es una marca de alta perfumería que se inspira en la botánica aromática del Continente Americano, sus perfumes la documentan y rinden homenaje a la riqueza olfativa y visual de sus especies.
+				<p>Xinú es una marca de alta perfumería que se inspira en la botánica aromática del Continente Americano, sus perfumes la documentan y rinden homenaje a la riqueza olfativa y visual de sus especies.</p>
 
-				Xinú se fundamenta en la gratificación sensorial que otorgan los aromas, apelando a la memoria olfativa personal. La narrativa de Xinú es puramente documental, las plantas se presentan con su nombre y apellido, ellas son las protagonistas de esta historia.
+				<p>Xinú se fundamenta en la gratificación sensorial que otorgan los aromas, apelando a la memoria olfativa personal. La narrativa de Xinú es puramente documental, las plantas se presentan con su nombre y apellido, ellas son las protagonistas de esta historia.</p>
 
-				América simboliza vastedad y exotismo; una búsqueda y un descubrimiento permanente. Xinú es un simple reflejo de riqueza botánica, de maestría artesanal, de vanguardia en diseño y de deleite olfativo.
+				<p>América simboliza vastedad y exotismo; una búsqueda y un descubrimiento permanente. Xinú es un simple reflejo de riqueza botánica, de maestría artesanal, de vanguardia en diseño y de deleite olfativo.</p>
 
 				<hr>
 
-				Xinú significa “nariz” en Otomí. El Otomí es una hermosa lengua tonal aún usada en algunas regiones de México.
+				<p>Xinú significa “nariz” en Otomí. El Otomí es una hermosa lengua tonal aún usada en algunas regiones de México.</p>
 			</div>
 			<div class="content" id="tienda_en">
 				Autumn 2016 Mexico City
@@ -63,9 +64,12 @@
 			<div class="content" id="press">
 				<span class="lang show" id="en" >Press</span><span class="lang hide" id="es" >Prensa</span>
 				<ul>
-					<li><a href="http://www.buro247.mx/belleza/botanicaromatica-de-las-americas.html">Büro 247 – Botanicaromática de las Américas (Stephanie Arouesty)</a></li>
-					<li><a href="http://www.huffingtonpost.com.mx/pamela-ocampo/que-bonito-se-escucha-xinu/">Huffington Post – Qué bonito se escucha Xinú (Pamela Ocampo)</a></li>
+					<li><a href="http://www.buro247.mx/belleza/botanicaromatica-de-las-americas.html" target="_blank">Büro 247 – Botanicaromática de las Américas (Stephanie Arouesty)</a></li>
+					<li><a href="http://www.huffingtonpost.com.mx/pamela-ocampo/que-bonito-se-escucha-xinu/" target="_blank">Huffington Post – Qué bonito se escucha Xinú (Pamela Ocampo)</a></li>
 				</ul>
+			</div>
+			<div class="watermark">
+				<img src="assets/logo.svg" alt="Xinu – Botánica de las Américas">
 			</div>
 		</div>
 
@@ -79,5 +83,13 @@
 			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 		</script>
 
+		<script>
+		$('nav a').click(function(){
+			$('.content').fadeOut('slow');
+			console.log('A');
+			var who = this.getAttribute('href');
+			$(who).fadeIn('slow');
+		});
+		</script>
 	</body>
 </html>
