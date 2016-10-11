@@ -18,18 +18,55 @@
 	</head>
 	<body>
 
-		<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
-		  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-		<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
-		<source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
+		<video poster="assets/background_fallback.jpg" id="bgvid" playsinline autoplay muted loop>
+			<source src="assets/background_video.webm" type="video/webm">
+			<source src="assets/background_video.mp4" type="video/mp4">
 		</video>
-		<div id="polina">
-		<h1>Polina</h1>
-		<p>filmed by Alexander Wagner 2011
-		<p><a href="http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video">original article</a>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
-		<p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
-		<button>Pause</button>
+		<div class="contain">
+			<a class="close"></a>
+			<nav class="menu">
+				<a href="#"><img src="assets/xinu_text.svg" alt="XINU"></a> |
+				<a href="#">THE STORE</a> |
+				<a href="#">PRESS</a> |
+				<a href="mailto:hola@xinu.mx">CONTACT</a> |
+				<a href="#"><img src="assets/ig_logo.svg" alt="instagram"></a> |
+				<a class="lang show" id="es" href="#">ESP</a><a class="lang hide" id="en">ENG</a>
+			</nav>
+			<div class="content" id="about_en">
+				Xinú is a high-end perfumery brand that draws its inspiration from the America’s aromatic botany. Its perfumes document and pay homage to the visual and olfactory richness of the continent’s species.
+
+				Xinú builds its foundation on the sensory indulgence provided by scents; it appeals to our individual olfactory memory. Xinú´s narrative is merely documentary: plants are introduced with their first and last names as they are the main characters in this story.
+
+				America symbolizes vastness and exoticism, a permanent search and discovery. Xinú is a reflection of botanical richness, artisanal mastery, cutting edge design and olfactory delight.
+
+				<hr>
+
+				Xinú means ‘nose’ in Otomi. Otomi is a beautiful tonal language still present in various regions of Mexico.
+			</div>
+			<div class="content" id="about_es">
+				Xinú es una marca de alta perfumería que se inspira en la botánica aromática del Continente Americano, sus perfumes la documentan y rinden homenaje a la riqueza olfativa y visual de sus especies.
+
+				Xinú se fundamenta en la gratificación sensorial que otorgan los aromas, apelando a la memoria olfativa personal. La narrativa de Xinú es puramente documental, las plantas se presentan con su nombre y apellido, ellas son las protagonistas de esta historia.
+
+				América simboliza vastedad y exotismo; una búsqueda y un descubrimiento permanente. Xinú es un simple reflejo de riqueza botánica, de maestría artesanal, de vanguardia en diseño y de deleite olfativo.
+
+				<hr>
+
+				Xinú significa “nariz” en Otomí. El Otomí es una hermosa lengua tonal aún usada en algunas regiones de México.
+			</div>
+			<div class="content" id="tienda_en">
+				Autumn 2016 Mexico City
+			</div>
+			<div class="content" id="tienda_es">
+				Otoño 2016 CDMX
+			</div>
+			<div class="content" id="press">
+				<span class="lang show" id="en" >Press</span><span class="lang hide" id="es" >Prensa</span>
+				<ul>
+					<li><a href="http://www.buro247.mx/belleza/botanicaromatica-de-las-americas.html">Büro 247 – Botanicaromática de las Américas (Stephanie Arouesty)</a></li>
+					<li><a href="http://www.huffingtonpost.com.mx/pamela-ocampo/que-bonito-se-escucha-xinu/">Huffington Post – Qué bonito se escucha Xinú (Pamela Ocampo)</a></li>
+				</ul>
+			</div>
 		</div>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
