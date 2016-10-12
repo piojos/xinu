@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title></title>
+		<title>XINÚ - botanicaromática de las américas.</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,6 @@
 		<!-- <link rel="stylesheet" href="css/main.css"> -->
 		<script src="js/modernizr-2.8.3.min.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js" integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE=" crossorigin="anonymous"></script>
-		<script src="js/magic.js"></script>
 	</head>
 	<body>
 
@@ -24,14 +23,24 @@
 			<source src="assets/background_video.mp4" type="video/mp4">
 		</video>
 		<div class="contain">
-			<a class="close"></a>
-			<nav class="menu">
-				<a href="#about_en" id="logo">XINU</a> |
-				<a href="#tienda_en">STORE</a> |
-				<a href="#press">PRESS</a> |
-				<a href="mailto:hola@xinu.mx">CONTACT</a> |
-				<a href="http://www.instagram.com/xinuperfumes" target="_blank"><img src="assets/ig_logo.svg" alt="instagram"></a> |
-				<a class="#lang hide" id="es" href="#">ESP</a><a class="lang hide" id="en">ENG</a>
+			<a class="bigX"></a>
+			<nav id="menu">
+				<div class="en">
+					<a href="#about_en" id="logo" class="inner">XINU</a> |
+					<a href="#store_en" class="inner">STORE</a> |
+					<a href="#press_es" class="inner">PRESS</a> |
+					<a href="mailto:hola@xinu.mx">CONTACT</a> |
+					<a href="http://www.instagram.com/xinuperfumes" target="_blank"><img src="assets/ig_logo.svg" alt="instagram"></a> |
+					<a class="lang" id="es">ESP</a>
+				</div>
+				<div class="es hide">
+					<a href="#about_es" id="logo" class="inner">XINU</a> |
+					<a href="#store_es" class="inner">TIENDA</a> |
+					<a href="#press_es" class="inner">PRENSA</a> |
+					<a href="mailto:hola@xinu.mx">CONTACTO</a> |
+					<a href="http://www.instagram.com/xinuperfumes" target="_blank"><img src="assets/ig_logo.svg" alt="instagram"></a> |
+					<a class="lang" id="en">ENG</a>
+				</div>
 			</nav>
 			<div class="content" id="about_en">
 				<p>Xinú is a high-end perfumery brand that draws its inspiration from the America’s aromatic botany. Its perfumes document and pay homage to the visual and olfactory richness of the continent’s species.</p>
@@ -55,13 +64,13 @@
 
 				<p>Xinú significa “nariz” en Otomí. El Otomí es una hermosa lengua tonal aún usada en algunas regiones de México.</p>
 			</div>
-			<div class="content" id="tienda_en">
+			<div class="content" id="store_en">
 				Autumn 2016 Mexico City
 			</div>
-			<div class="content" id="tienda_es">
+			<div class="content" id="store_es">
 				Otoño 2016 CDMX
 			</div>
-			<div class="content" id="press">
+			<div class="content" id="press_es">
 				<span class="lang show" id="en" >Press</span><span class="lang hide" id="es" >Prensa</span>
 				<ul>
 					<li><a href="http://www.buro247.mx/belleza/botanicaromatica-de-las-americas.html" target="_blank">Büro 247 – Botanicaromática de las Américas (Stephanie Arouesty)</a></li>
@@ -70,6 +79,7 @@
 			</div>
 			<div class="watermark">
 				<img src="assets/logo.svg" alt="Xinu – Botánica de las Américas">
+				<a href="#" class="back">BACK</a>
 			</div>
 		</div>
 
@@ -82,14 +92,6 @@
 			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 		</script>
-
-		<script>
-		$('nav a').click(function(){
-			$('.content').fadeOut('slow');
-			console.log('A');
-			var who = this.getAttribute('href');
-			$(who).fadeIn('slow');
-		});
-		</script>
+		<script src="js/magic.js"></script>
 	</body>
 </html>
