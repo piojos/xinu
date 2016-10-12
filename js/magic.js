@@ -1,31 +1,15 @@
-var vid = document.getElementById("bgvid");
-// var menuButtons = document.getElementsByClassName("nav a");
-// var pauseButton = document.querySelector("#polina button");
+// var vid = document.getElementById("bgvid");
+var speed = 400;
 
-function vidFade() {
-	vid.classList.add("stopfade");
-};
+$('nav a.inner').click(function(){
+	var who = this.getAttribute('href');
+	$('.content, #menu, .watermark img').fadeOut(speed);
+	$(who).delay(speed).fadeIn(speed);
+	$('.watermark > a').delay(speed).fadeIn(speed);
+});
 
-// menuButtons.addEventListener('click', function(){
-// 	console.log('EE');
-// });
-
-
-// vid.addEventListener('ended', function(){
-// 	vid.pause();
-// 	vidFade();
-// });
-
-
-// pauseButton.addEventListener("click", function() {
-// 	vid.classList.toggle("stopfade");
-// 	if (vid.paused) {
-// 		vid.play();
-// 		pauseButton.innerHTML = "Pause";
-// 	} else {
-// 		vid.pause();
-// 		pauseButton.innerHTML = "Paused";
-// 	}
-// })
-
-	console.log('0');
+$('.watermark > a').click(function() {
+	$(this).fadeOut(speed);
+	$('.content').fadeOut(speed);
+	$('#menu, .watermark img').delay(speed).fadeIn(speed);
+});
