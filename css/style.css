@@ -1,94 +1,147 @@
-@font-face {
-	font-family: Sentinel;
-	src: url(../assets/Sentinel-Light.otf);
-}
-@font-face {
-	font-family: Sentinel;
-	src: url(../assets/Sentinel-LightItalic.otf);
-	font-style: italic;
-}
-@font-face {
-	font-family: Gotham;
-	src: url(../assets/Gotham-Medium.otf);
-}
 
-body {
-	margin: 0;
-	background: #000;
-	font-family: Sentinel, serif;
-	font-size: 16px;
-	color: white;
-	text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.4);
-	text-align: center;
-}
-a {
-	color: white;
-	text-decoration: none;
-}
-.contain {
-	max-width: 48em;
-	padding: 2em;
-	margin: 2em auto;
-}
-video {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -100;
-	transform: translateX(-50%) translateY(-50%);
-	background: url('../assets/background_fallback.jpg') no-repeat;
-	background-size: cover;
-	transition: 1s opacity;
-}
-nav {
-	font-family: Gotham;
-	margin-bottom: 2em;
-	letter-spacing: .25em;
-}
-nav a {
-	margin: 0 1em;
-}
+/* Fonts & Basic */
 
-a#logo {
-	position: relative;
-}
-a#logo:after {
-	content: '';
-	display: inline-block;
-	width: 5px;
-	height: 2px;
-	background: white;
-	position: absolute;
-	right: 10px;
-}
+	@font-face {
+		font-family: Sentinel;
+		src: url(../assets/Sentinel-Light.otf);
+	}
+	@font-face {
+		font-family: Sentinel;
+		src: url(../assets/Sentinel-LightItalic.otf);
+		font-style: italic;
+	}
+	@font-face {
+		font-family: Gotham;
+		src: url(../assets/Gotham-Medium.otf);
+	}
 
-.watermark {
-	margin-top: 2em;
-}
-.stopfade {
-	opacity: .5;
-}
+	body {
+		margin: 0;
+		background: #000;
+		font-family: Sentinel, serif;
+		font-size: 16px;
+		color: white;
+		text-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
+		text-align: center;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	hr {
+		border: none;
+		border-top: 1px solid;
+		max-width: 6em;
+	}
+	li {
+		display: inline-block;
+	}
+	.hide,
+	.content,
+	.back {
+		display: none;
+	}
 
-hr {
-	border: none;
-	border-top: 1px solid;
-	max-width: 6em;
-}
-.hide {
-	display: none;
-}
 
-.content {
-	display: none;
-}
-@media screen and (max-width: 500px) {
-	div{width:70%;}
-}
-@media screen and (max-device-width: 800px) {
-	html { background: url(../assets/background_fallback.jpg) #000 no-repeat center center fixed; }
-	#bgvid { display: none; }
-}
+
+
+/* Structure */
+
+	.contain {
+		max-width: 48em;
+		padding: 2em;
+		margin: 10vh auto 10vh;
+		position: relative;
+	}
+	video {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -100;
+		transform: translateX(-50%) translateY(-50%);
+		background: url('../assets/background_fallback.jpg') no-repeat;
+		background-size: cover;
+		transition: 1s opacity;
+	}
+	a.bigX {
+		position: relative;
+		display: inline-block;
+		height: 2em;
+		padding-top: 2em;
+	}
+	a.bigX:before,
+	a.bigX:after {
+		content: '';
+		display: block;
+		width: 4em;
+		border-top: 1px solid;
+		transform: rotate(45deg);
+	}
+	a.bigX:after {
+		transform: rotate(-45deg);
+	}
+	nav {
+		font-family: Gotham;
+		margin-bottom: 2em;
+		font-size: .875em;
+		letter-spacing: .5em;
+		-webkit-font-smoothing: antialiased;
+		margin: 20vh 0;
+	}
+	nav a {
+		margin: 0 1em;
+	}
+	nav img {
+		vertical-align: text-bottom;
+	}
+	a#logo {
+		position: relative;
+	}
+	a#logo:after {
+		content: '';
+		display: inline-block;
+		width: 4px;
+		height: 2px;
+		background: white;
+		position: absolute;
+		right: .75em;
+		top: -3px;
+	}
+	.watermark {
+		margin-top: 2em;
+	}
+	.stopfade {
+		opacity: .5;
+	}
+	.back {
+		font-family: Gotham, sans-serif;
+		letter-spacing: .5em;
+		-webkit-font-smoothing: antialiased;
+	}
+
+
+
+/* Content */
+
+	.content {
+		margin-top: 20vh;
+		margin-bottom: 20vh;
+	}
+
+
+
+
+/* Queries */
+
+	@media screen and (max-width: 500px) {
+		div{width:70%;}
+	}
+	@media screen and (max-device-width: 800px) {
+		html { background: url(../assets/background_fallback.jpg) #000 no-repeat center center fixed; }
+		#bgvid { display: none; }
+	}
