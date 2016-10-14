@@ -17,7 +17,6 @@
 
 	body {
 		margin: 0;
-		background: #000;
 		font-family: Sentinel, serif;
 		font-size: 16px;
 		color: white;
@@ -34,8 +33,14 @@
 		border-top: 1px solid;
 		max-width: 6em;
 	}
+	ul {
+		padding: 0;
+	}
 	li {
 		display: inline-block;
+	}
+	li:before {
+		content: '• ';
 	}
 	.hide,
 	.content,
@@ -106,12 +111,12 @@
 	a#logo:after {
 		content: '';
 		display: inline-block;
-		width: 4px;
-		height: 2px;
+		width: .25em;
+		height: .1em;
 		background: white;
 		position: absolute;
 		right: .75em;
-		top: -3px;
+		top: -.1em;
 	}
 	.watermark {
 		margin-top: 2em;
@@ -128,7 +133,7 @@
 		width: 100%;
 		height: 100%;
 		background: rgba(0,0,0,0.5);
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 	}
@@ -139,8 +144,26 @@
 	.content {
 		margin-top: 20vh;
 		margin-bottom: 20vh;
+		-webkit-font-smoothing: antialiased;
+	}
+	.content i {
+		font-size: .875em;
+	}
+	.content img {
+		max-width: 100%;
+		height: auto;
 	}
 
+	.content#moodboard {
+		margin-top: 10vh;
+		margin-bottom: 10vh;
+	}
+
+	@media(max-width:425px) {
+		.contain {
+			padding: 1em;
+		}
+	}
 
 
 
