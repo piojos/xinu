@@ -2,6 +2,24 @@
 var speed = 400;
 var audio_file = new Audio('assets/background_music.mp3');
 
+// Nice other method: detects browser language preferences
+// var language = window.navigator.userLanguage || window.navigator.language;
+// alert(language);
+
+$.get("http://ipinfo.io", function (response) {
+	var country = response.country;
+	var spanish = ['ES', 'AR', 'BO', 'CL', 'CO', 'CR', 'CU', 'DO', 'EC', 'SV', 'GT', 'HN', 'MX', 'NI', 'PN', 'PA', 'PE', 'PR', 'UY', 'VE'];
+	if( $.inArray(country, spanish) != -1){
+		console.log('español');
+		$('nav .es').fadeIn('slow');
+		$('.watermark').delay(speed).fadeIn(speed);
+	} else {
+		console.log('english');
+		$('nav .en').fadeIn('slow');
+		$('.watermark').delay(speed).fadeIn(speed);
+	}
+}, "jsonp");
+
 $('nav a.inner').click(function(){
 	var who = this.getAttribute('href');
 	$('.content, #menu, .watermark img').fadeOut(speed);
