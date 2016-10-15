@@ -31,7 +31,9 @@
 	hr {
 		border: none;
 		border-top: 1px solid;
-		max-width: 6em;
+		width: 6em;
+		margin: 2em auto;
+		position: relative;
 	}
 	ul {
 		padding: 0;
@@ -73,21 +75,24 @@
 		background-size: cover;
 		transition: 1s opacity;
 	}
-	a.bigX {
+	.bigX {
 		position: relative;
 		display: inline-block;
 		height: 2em;
 		padding-top: 2em;
 	}
-	a.bigX:before,
-	a.bigX:after {
+	.bigX:before,
+	.bigX:after,
+	a.back hr:before,
+	a.back hr:after {
 		content: '';
 		display: block;
 		width: 4em;
 		border-top: 1px solid;
 		transform: rotate(45deg);
 	}
-	a.bigX:after {
+	.bigX:after,
+	a.back hr:after {
 		transform: rotate(-45deg);
 	}
 	nav {
@@ -153,7 +158,19 @@
 		max-width: 100%;
 		height: auto;
 	}
-
+	a.back {
+		display: inline-block;
+	}
+	a.back hr:before,
+	a.back hr:after {
+		width: 2em;
+		top: -.75em;
+		position: absolute;
+		left: -.35em;
+	}
+	a.back hr:before {
+		top: .65em;
+	}
 	.content#moodboard {
 		margin-top: 10vh;
 		margin-bottom: 10vh;
