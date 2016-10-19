@@ -16,6 +16,9 @@
 	}
 
 	body {
+
+		background: #000;
+
 		margin: 0;
 		font-family: Sentinel, serif;
 		font-size: 16px;
@@ -41,7 +44,7 @@
 	li {
 		display: inline-block;
 	}
-	li:before {
+	.content li:before {
 		content: '• ';
 	}
 	.hide,
@@ -75,11 +78,30 @@
 		background-size: cover;
 		transition: 1s opacity;
 	}
+	.unslider {
+		position: fixed;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+	.unslider .slider,
+	ul.unslider-wrap,
+	.unslider li,
+	.unslider li img {
+		height: 100%;
+	}
+	.unslider li {
+		overflow:hidden;
+		background-size: cover !important;
+		background-position: center !important;
+	}
+	.unslider .slider {overflow: initial !important;}
 	.bigX {
 		position: relative;
 		display: inline-block;
 		height: 2em;
 		padding-top: 2em;
+		opacity: 0;
 	}
 	.bigX:before,
 	.bigX:after,
